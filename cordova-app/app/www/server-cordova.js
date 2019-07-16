@@ -16,9 +16,9 @@ var app = {
 };
 
 
-function waiting(){
-	console.log('waiting...');
-	  
+function showApp() {
+  document.getElementById("loader").style.display = "none";
+  window.open('http://localhost:8081', '_self');
 }
 
 function startNodeProject(startFile) {
@@ -27,9 +27,7 @@ function startNodeProject(startFile) {
                 console.log('The nodejs-mobile engine not started for error: '+err);
         } else {
             console.log('The nodejs-mobile engine started successfully.')
-            setTimeout(waiting(), 2000);
-	    document.getElementById('loading').setAttribute('style','display:none;');
-	    var ref = window.open('http://localhost:8081', '_self');
+            setTimeout(showApp(), 2000);	   
         }
     });
 };

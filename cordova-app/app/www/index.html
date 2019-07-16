@@ -1,25 +1,49 @@
 <!doctype html><html>
 <head><base href="./">
 
-<link rel="stylesheet" href="font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
     body {
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
+   #loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
 
-    * {
-      font-family: 'VT323', sans-serif;
-    }
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
 
-    #loading {
-      position: absolute;
-      width: 100%;
-      top: 45%;
-      text-align: center;
-    }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
   </style>
 
 </head>
@@ -27,7 +51,6 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="server-cordova.js"></script>
 
-<div id="loading">
-    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-  </div>
-</body></html>
+<div id="loader"></div>
+
+</html>
