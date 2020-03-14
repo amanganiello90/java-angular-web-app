@@ -19,7 +19,7 @@
         "cordova": "7.0.0"
     },
     "dependencies": {
-	    "acorn": "6.0.5",
+	    "acorn": "7.1.1",
         "cordova-android": "6.3.0",
         "cordova-plugin-whitelist": "1.3.3",
         "nodejs-cordova-plugin": "2.0.0"
